@@ -14,10 +14,10 @@ function Header({ onToggleTheme, theme }) {
         <span className="slider round"></span>
       </label>
 
-      <h1>VedaSkript</h1>
+      <h1>TarkSkript</h1>
 
       <p>
-        <strong>vedaskript</strong> is a toy programming language, based on Sanskrit keywords and operators. It supports variables, basic operations, loops, conditions, and built-in functions, all expressed in Sanskrit.
+        <strong>tarkskript</strong> is a toy programming language, based on Sanskrit keywords and operators. It supports variables, basic operations, loops, conditions, and built-in functions, all expressed in Sanskrit.
       </p>
 
       <div>

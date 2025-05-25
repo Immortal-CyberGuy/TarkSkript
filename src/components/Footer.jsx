@@ -17,7 +17,7 @@ function Footer() {
           <FontAwesomeIcon icon={faLinkedin} />
         </a>
       </div>
-      <p>© 2025 <strong>SanskritLang</strong>. Created by <strong>Shubham Garg</strong></p>
+      <p>© 2025 <strong>TarkSkript</strong>. Created by <strong>Shubham Garg</strong></p>
     </footer>
   );
 }
