@@ -1,0 +1,89 @@
+.header {
+  text-align: center;
+  padding: 150px 20px 50px ; /* increased top padding for more space above */
+  position: relative;
+  
+}
+
+.header h1 {
+  font-family: "Samarkan", sans-serif;
+  font-size: 9vw;
+  color: #d6b600;
+  margin-bottom: 100px;
+  margin: 0;
+  text-shadow:
+    1px 1px 0 #b39700,
+    2px 2px 0 #b39700,
+    3px 3px 6px rgba(0, 0, 0, 0.5); /* bold glow + depth */
+  -webkit-text-stroke: 1px #b39700; /* adds a thicker outer edge */
+  letter-spacing: 1.5px;
+}
+
+
+
+.header p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.view-source {
+  background-color: #182e6a;
+  color: white;
+  border: none;
+  border-radius: 2em;
+  padding: 15px 25px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 1rem;
+}
+
+.view-source:hover {
+  background-color: #091f5e;
+}
+
+/* Toggle Switch */
+.switch {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 26px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #182e6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+
