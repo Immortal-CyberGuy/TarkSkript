@@ -4,6 +4,7 @@ import Playground from "./components/Playground";
 import Documentation from "./components/Documentation";
 import Footer from "./components/Footer";
 import './App.css';
+import ChatBot from "./components/Chatbot/ChatBot";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Header onToggleTheme={toggleTheme} theme={theme} />
       <Playground />
       <Documentation />
+      <ChatBot />
       <Footer />
     </>
   );
