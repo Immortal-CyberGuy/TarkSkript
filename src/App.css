@@ -19,3 +19,13 @@ body {
   transition: background-color 0.3s, color 0.3s;
   font-family: 'Inter', sans-serif;
 }
+@font-face {
+  font-family: 'Samarkan';
+  src: url('/samarkan-font/SAMAN___.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.samarkan-text {
+  font-family: 'Samarkan', sans-serif;
+}
+
