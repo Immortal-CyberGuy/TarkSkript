@@ -1,7 +1,12 @@
 // ✅ FRONTEND
 export const fetchGeminiResponse = async (chatHistory) => {
   try {
-    const response = await fetch("http://localhost:4000/chat", {
+    const API_URL =
+    window.location.hostname === 'localhost'
+      ? 'http://localhost:4000/chat'
+      : 'https://tarkskript.onrender.com/chat';
+
+    const response = await fetch("API_URL", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
