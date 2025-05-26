@@ -78,7 +78,7 @@ export default function Playground() {
 
         <div className="editor-container">
           <MonacoEditor
-            height="340px"
+            height="440px"
             language="plaintext"
             value={code}
             onChange={(value) => setCode(value || '')}
