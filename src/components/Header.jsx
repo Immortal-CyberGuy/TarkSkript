@@ -23,7 +23,7 @@ function Header({ onToggleTheme, theme }) {
       <div className="source-button-wrapper">
         <button
           className="view-source enhanced-button"
-          onClick={() => window.open('https://github.com/Immortal-CyberGuy')}
+          onClick={() => window.open('https://github.com/Immortal-CyberGuy/TarkSkript')}
         >
           View Source <i className="fa-solid fa-code"></i>
         </button>
