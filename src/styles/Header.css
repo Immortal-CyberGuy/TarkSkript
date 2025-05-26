@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "samarkan";
+  src: url("../font/samarkan-font/SAMAN___.ttf") format("woff2");
+}
 .header.enhanced-header {
   text-align: center;
   padding: 140px 20px 60px;
