@@ -1,7 +1,9 @@
 /* === Base Reset === */
 @font-face {
-  font-family: "samarkan";
-  src: url("../font/samarkan-font/SAMAN___.ttf") format("woff2");
+  font-family: 'Samarkan';
+  src: url('/samarkan-font/SAMAN___.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 body {
   margin: 0;

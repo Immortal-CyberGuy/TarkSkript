@@ -1,10 +1,9 @@
 @font-face {
   font-family: 'Samarkan';
-  src: url('/fonts/SAMAN___.ttf') format('truetype');
+  src: url('/samarkan-font/SAMAN___.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-
 
 
 /* :root {
