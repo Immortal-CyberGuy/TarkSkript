@@ -227,3 +227,104 @@ body.light .copy-code i {
   color: #fff;
   font-size: 16px;
 }
+
+
+
+/* === Base Styles Already Included === */
+/* Retain everything from your original file (already correct and styled well) */
+
+/* === Responsive Enhancements === */
+
+/* Tablet landscape and below (≤ 1024px) */
+@media (max-width: 1024px) {
+  .documentation {
+    padding: 0 1.5rem;
+  }
+
+  .documentation h2 {
+    font-size: 2.5rem;
+  }
+
+  .documentation .doc-blocks {
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 30px;
+  }
+
+  .documentation .doc-block pre {
+    font-size: 14px;
+    max-height: 260px;
+  }
+}
+
+/* Tablet portrait and below (≤ 768px) */
+@media (max-width: 768px) {
+  .documentation h2 {
+    font-size: 2.25rem;
+  }
+
+  .documentation .doc-blocks {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .documentation .doc-block h3 {
+    font-size: 1.35rem;
+  }
+
+  .documentation .doc-block {
+    padding: 20px 20px 24px;
+  }
+
+  .documentation .doc-block pre {
+    font-size: 13.5px;
+    max-height: 280px;
+  }
+
+  .block-desc {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile devices (≤ 480px) */
+@media (max-width: 480px) {
+  .documentation {
+    padding: 0 1rem;
+  }
+
+  .documentation h2 {
+    font-size: 2rem;
+    padding-left: 12px;
+    border-left-width: 4px;
+  }
+
+  .documentation .doc-block {
+    padding: 18px;
+  }
+
+  .documentation .doc-block h3 {
+    font-size: 1.25rem;
+    padding-left: 12px;
+    border-left-width: 4px;
+  }
+
+  .documentation .doc-block pre {
+    font-size: 13px;
+    padding: 14px;
+    max-height: 300px;
+  }
+
+  .block-desc {
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .copy-code {
+    top: 12px;
+    right: 12px;
+    padding: 8px;
+  }
+
+  .copy-code i {
+    font-size: 14px;
+  }
+}

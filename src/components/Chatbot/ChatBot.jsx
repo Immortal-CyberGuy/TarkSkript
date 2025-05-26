@@ -54,7 +54,7 @@ const ChatBot = () => {
         <div
           className="chat-body"
           ref={chatContainerRef}
-          style={{ overflowY: "auto", maxHeight: "400px" }}
+          style={{ overflowY: "auto", maxHeight: "370px" }}
         >
           <div className="message bot-message">
             <ChatbotIcon />
