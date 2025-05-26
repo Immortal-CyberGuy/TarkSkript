@@ -6,6 +6,7 @@ import { faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-
 function Footer() {
   return (
     <footer>
+      <div className="footer-container">
       <div className="social-links">
         <a href="https://github.com/Immortal-CyberGuy" target="_blank" rel="noreferrer">
           <FontAwesomeIcon icon={faGithub} />
@@ -18,6 +19,7 @@ function Footer() {
         </a>
       </div>
       <p>© 2025 <strong>TarkSkript</strong>. Created by <strong>Shubham Garg</strong></p>
+      </div>
     </footer>
   );
 }
