@@ -27,35 +27,41 @@ export default function Playground() {
   };
 
   const executeCode = async () => {
-    setOutput('// Running...');
-    setStatusMessage(null);
+  setOutput('// Running...');
+  setStatusMessage(null);
 
-    try {
-      const response = await fetch('http://localhost:4000/run', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ code }),
-      });
+  const API_URL =
+    window.location.hostname === 'localhost'
+      ? 'http://localhost:4000/run'
+      : 'https://tarkskript.onrender.com/run';
 
-      const result = await response.json();
-      const { programOutput, success } = result;
+  try {
+    const response = await fetch(API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ code }),
+    });
 
-      setOutput(programOutput || '// (no output)');
+    const result = await response.json();
+    const { programOutput, success } = result;
 
-      setStatusMessage({
-        text: success
-          ? '=== Code Execution Successful ==='
-          : '=== Code Exited With Errors ===',
-        color: success ? 'green' : 'red',
-      });
-    } catch (err) {
-      setOutput(`Unexpected error: ${err.message}`);
-      setStatusMessage({
-        text: '=== Code Exited With Errors ===',
-        color: 'red',
-      });
-    }
-  };
+    setOutput(programOutput || '// (no output)');
+
+    setStatusMessage({
+      text: success
+        ? '=== Code Execution Successful ==='
+        : '=== Code Exited With Errors ===',
+      color: success ? 'green' : 'red',
+    });
+  } catch (err) {
+    setOutput(`Unexpected error: ${err.message}`);
+    setStatusMessage({
+      text: '=== Code Exited With Errors ===',
+      color: 'red',
+    });
+  }
+};
+
 
   return (
     <main className="playground-wrapper">
