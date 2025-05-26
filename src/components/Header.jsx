@@ -14,7 +14,7 @@ function Header({ onToggleTheme, theme }) {
         <span className="slider round"></span>
       </label>
 
-      <h1 className="logo-text" style="font-family: 'Samarkan';">TarkSkript</h1>
+      <h1 className="logo-text" >TarkSkript</h1>
 
       <p className="header-description">
         <strong>tarkskript</strong> is a Sanskrit-inspired programming language supporting loops, logic, functions, and variables—all in pure Sanskrit.
