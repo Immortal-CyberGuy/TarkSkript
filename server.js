@@ -82,15 +82,13 @@ app.post('/run', async (req, res) => {
   const { code } = req.body;
 
 const prompt = `
-You are a strict compiler and interpreter for a Sanskrit-inspired programming language called TarkSkript.
+You are a **strict compiler and interpreter** for a Sanskrit-inspired programming language called **TarkSkript**.
 
 🧠 Core Language Rules:
 
-1. You recognize and support the following **predefined Sanskrit keywords**:
+1. You recognize and support exactly the following **predefined Sanskrit keywords** (no others):
 
 {
-  "अनुवर्तते":"continue"
-  "मुद्रणम्": "console.log"
   "कार्य": "function",
   "मुख्यः": "main",
   "यदि": "if",
@@ -101,10 +99,10 @@ You are a strict compiler and interpreter for a Sanskrit-inspired programming la
   "यावद्": "while",
   "आवृत्तिः": "for",
   "चक्रः": "loop",
-  "स्थिरः": "const",
   "चलः": "let",
-  "फलम्": "result",
-  "प्रतिफलम्": "return",
+  "स्थिरः": "const",
+  "मुद्रणम्": "console.log",
+  "अनुवर्तते": "continue",
   "इनपुट्": "input",
   "लम्बः": "length",
   "दीर्घः": "length",
@@ -114,35 +112,29 @@ You are a strict compiler and interpreter for a Sanskrit-inspired programming la
   "नवीनतम्_सूची": "newList",
   "योजयतु": "push",
   "संलग्नम्": "push",
+  "फलम्": "result",
+  "प्रतिफलम्": "return",
   "न्यूनतमम्": "Math.min",
   "अधिकतमम्": "Math.max",
   "अनन्तम्": "Infinity",
   "ऋण_अनन्तम्": "-Infinity"
 }
 
+2. **No guessing.** Any identifier not in this list, or any suspicious/ambiguous Sanskrit word, must trigger a compiler error:
+   \`Main.tarkskript:LINE: error: 'WORD' is not defined\`
 
-2. For **non-standard Sanskrit identifiers**, you may infer their meaning to JavaScript **only when**:
+3. **Absolute syntax strictness.** Do not tolerate or auto-correct any of the following:
+   - Missing or extra semicolons
+   - Missing, unmatched, or extra parentheses \`()\`, braces \`{}\`, or brackets \`[]\`
+   - Missing or incorrect quotes (\`'\` or \`"\`)
+   - Any malformed structure, invalid operator, or keyword misuse
 
-   - The word is clearly and grammatically formed.  
-   - Its role or meaning is unambiguous from context.  
-   - It resembles known structures (e.g., नवीनतम्_सूची → newList, फलम् → result).
+   If **any** such issue is detected, immediately return a compiler-style error without trying to fix or continue.
 
-3. However, **do not guess**. If any identifier is suspicious, undefined, or unclear:
-   ❌ Do NOT translate it.  
-   ✅ Instead, throw a compiler-style error like:
-   Main.tarkskript:LINE: error: 'WORD' is not defined.
+4. **On error**, return one or more lines in the exact format:
+   \`Main.tarkskript:LINE: error: [description]\`
 
-4. Be **absolutely strict** about syntax and structure:
-   - Missing semicolons, quotes, brackets, logical and methamatical operators or keyword misuse must all be treated as errors.
-   - Do not auto-correct or tolerate any mistake.
-
-✅ On success:
-- Return only the exact program output, exactly as it would appear in a terminal — no summaries, no decorations.
-
-❌ On failure:
-- Return only compiler-style error messages, line-by-line, in this format:
-  Main.tarkskript:LINE: error: [description]
-- Do not output JavaScript, do not offer explanations or fixes.
+5. **On success**, return **only** the raw terminal-style output of the program — no headers, summaries, or explanations.
 
 Vedaskript Input:
 \`\`\`
