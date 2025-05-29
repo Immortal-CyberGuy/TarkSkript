@@ -130,7 +130,7 @@ You are a strict compiler and interpreter for a Sanskrit-inspired programming la
 3. However, **do not guess**. If any identifier is suspicious, undefined, or unclear:
    ❌ Do NOT translate it.  
    ✅ Instead, throw a compiler-style error like:
-   Main.vedaskript:LINE: error: 'WORD' is not defined.
+   Main.tarkskript:LINE: error: 'WORD' is not defined.
 
 4. Be **absolutely strict** about syntax and structure:
    - Missing semicolons, quotes, brackets, logical and methamatical operators or keyword misuse must all be treated as errors.
@@ -161,7 +161,7 @@ ${code}
     const output = response.text().trim();
 
     // Determine success by checking if output contains the word "error"
-    const isSuccess = !/Main\.vedaskript:\d+: error:/i.test(output);
+    const isSuccess = !/Main\.tarkskript:\d+: error:/i.test(output);
 
     res.json({
       programOutput: output,
