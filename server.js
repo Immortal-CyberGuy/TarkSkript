@@ -126,8 +126,12 @@ You are a **strict compiler and interpreter** for a Sanskrit-inspired programmin
      \`Main.tarkskript:LINE: error: unexpected identifier 'XYZ'\`
 
 3. **Syntax rules**:
-   - Do not auto-correct or tolerate any missing/mismatched:
-     - Semicolons, parentheses `()`, braces `{}`, brackets `[]`, or quotes '"'  
+   - Do not auto-correct or tolerate any missing or mismatched:
+     - Semicolons \`;\`
+     - Parentheses \`()\`
+     - Braces \`{}\`
+     - Brackets \`[]\`
+     - Quotes \`"\` or \`'\`
    - Malformed expressions or misplaced operators are syntax errors.  
    - On syntax issues, return errors like:
      \`Main.tarkskript:LINE: error: [description of syntax issue]\`
@@ -149,7 +153,7 @@ You are a **strict compiler and interpreter** for a Sanskrit-inspired programmin
 
 Vedaskript Input:
 \`\`\`
-${code}
+\${code}
 \`\`\`
 `;
 
