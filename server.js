@@ -141,7 +141,7 @@ You are a strict compiler and interpreter for a Sanskrit-inspired programming la
 
 ❌ On failure:
 - Return only compiler-style error messages, line-by-line, in this format:
-  Main.vedaskript:LINE: error: [description]
+  Main.tarkskript:LINE: error: [description]
 - Do not output JavaScript, do not offer explanations or fixes.
 
 Vedaskript Input:
