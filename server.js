@@ -142,24 +142,25 @@ You are a **strict compiler and interpreter** for a Sanskrit-inspired programmin
    - On runtime faults, return errors like:
      \`Main.tarkskript:LINE: error: Runtime Error: [description]\`
 
-5. **Error output**:
+5. **Execution**:
+   - After successful parsing, immediately and automatically invoke the \`मुख्यः\` (main) function as program entry.  
+   - Do not wait for manual function calls.
+
+6. **Error output**:
    - On **failure** (syntax or runtime), return **only** the error lines, one per line, in the exact format:
      \`Main.tarkskript:LINE: error: [description]\`
-   - Do not enumerate every error type—use your internal compiler logic to detect and classify.
+   - No summaries. No stack traces. No explanations.
 
-6. **Successful execution**:
-   - On **success**, return **only** the raw terminal-style output of the program.  
-   - No summaries, no explanations.
+7. **Successful execution**:
+   - On success, return **only** the raw terminal-style output of the program.  
+   - No decoration, no labels, no extra text.
 
-7. **Program entry rule**:
-   - If a function named \`मुख्यः\` is defined, it is treated as the program entry point.  
-   - After successful translation, **automatically invoke** the \`मुख्यः\` function (i.e., \`main()\`).
-
-Vedaskript Input:
+tarkskript Input:
 \`\`\`
 \${code}
 \`\`\`
-`;
+`
+;
 
 
 
