@@ -151,11 +151,16 @@ You are a **strict compiler and interpreter** for a Sanskrit-inspired programmin
    - On **success**, return **only** the raw terminal-style output of the program.  
    - No summaries, no explanations.
 
+7. **Program entry rule**:
+   - If a function named \`मुख्यः\` is defined, it is treated as the program entry point.  
+   - After successful translation, **automatically invoke** the \`मुख्यः\` function (i.e., \`main()\`).
+
 Vedaskript Input:
 \`\`\`
 \${code}
 \`\`\`
 `;
+
 
 
 
