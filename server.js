@@ -81,8 +81,8 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 app.post('/run', async (req, res) => {
   const { code } = req.body;
 
-const prompt = `
-You are a **strict compiler and interpreter** for a Sanskrit-inspired programming language called **TarkSkript**.
+const prompt = 
+`You are a **strict compiler and interpreter** for a Sanskrit-inspired programming language called **TarkSkript**.
 
 🧠 Core Language Rules:
 
@@ -121,46 +121,42 @@ You are a **strict compiler and interpreter** for a Sanskrit-inspired programmin
 }
 
 2. **Identifier policy**:
-   - Any word not in this list is invalid.  
+   - Any word **not** in this list is invalid.  
    - On encountering such an identifier, throw a compiler-style error:
-     \`Main.tarkskript:LINE: error: unexpected identifier 'XYZ'\`
+     \Main.tarkskript:LINE: error: unexpected identifier 'XYZ'\
 
 3. **Syntax rules**:
-   - Do not auto-correct or tolerate any missing or mismatched:
-     - Semicolons \`;\`
-     - Parentheses \`()\`
-     - Braces \`{}\`
-     - Brackets \`[]\`
-     - Quotes \`"\` or \`'\`
+   - Do **not** auto-correct or tolerate any missing or mismatched:
+     - Semicolons \;\ 
+     - Parentheses \()\ 
+     - Braces \{}\ 
+     - Brackets \[]\ 
+     - Quotes \"\ or \'\ 
    - Malformed expressions or misplaced operators are syntax errors.  
    - On syntax issues, return errors like:
-     \`Main.tarkskript:LINE: error: [description of syntax issue]\`
+     \Main.tarkskript:LINE: error: [description of syntax issue]\
 
 4. **Runtime rules**:
    - Detect and report runtime errors, including overflow, division by zero, invalid operations, etc.  
    - Classify every error as either **Syntax Error** or **Runtime Error**.  
    - On runtime faults, return errors like:
-     \`Main.tarkskript:LINE: error: Runtime Error: [description]\`
+     \Main.tarkskript:LINE: error: Runtime Error: [description]\
 
-5. **Execution**:
-   - After successful parsing, immediately and automatically invoke the \`मुख्यः\` (main) function as program entry.  
-   - Do not wait for manual function calls.
-
-6. **Error output**:
+5. **Error output**:
    - On **failure** (syntax or runtime), return **only** the error lines, one per line, in the exact format:
-     \`Main.tarkskript:LINE: error: [description]\`
-   - No summaries. No stack traces. No explanations.
+     \Main.tarkskript:LINE: error: [description]\ 
+   - Do not enumerate every error type—use your internal compiler logic to detect and classify.
 
-7. **Successful execution**:
-   - On success, return **only** the raw terminal-style output of the program.  
-   - No decoration, no labels, no extra text.
+6. **Successful execution**:
+   - On **success**, return **only** the raw terminal-style output of the program.  
+   - No summaries, no explanations.
 
-tarkskript Input:
-\`\`\`
+Tarkskript Input: 
+\\\
 \${code}
-\`\`\`
+\\\
 `
-;
+  ;
 
 
 
