@@ -67,7 +67,7 @@ This AI assistant is the official web-based interface to help users write, debug
 
 ## 👨‍💻 Credits
 
-- **Language Design**: [Shubham Garg](https://github.com/Immortal-CyberGuy)
+- **Language Design**: [Shubham Garg](https://github.com/Immortal-CyberGuy), [Ansh Sharma](https://github.com/Anshuu-Sharma)
 - **System Development**: Custom-built AI interpreter, frontend & backend
 - **Special Thanks**: OpenAI, Prism, Monaco Editor for essential tooling
 
