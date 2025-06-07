@@ -1,6 +1,6 @@
 # 🪔 TarkSkript AI Assistant
 
-**TarkSkript** is a Sanskrit-inspired programming language designed under the leadership of **Shubham Garg**, merging traditional linguistic roots with modern programming logic.
+**TarkSkript** is a Sanskrit-inspired programming language designed under the leadership of **Shubham Garg** & **Ansh Sharma**, merging traditional linguistic roots with modern programming logic.
 
 This AI assistant is the official web-based interface to help users write, debug, and convert code using TarkSkript's strictly defined Sanskrit grammar.
 
