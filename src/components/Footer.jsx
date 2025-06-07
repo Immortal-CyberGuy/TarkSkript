@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/Footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import shubhamImg from '../assets/s_garg.png';
+import shubhamImg from '../assets/s_garg.jpg';
 import anshImg from '../assets/ansh.png';
 
 
